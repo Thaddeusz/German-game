@@ -79,7 +79,7 @@ while True:
         inp = input("\nWhat's the word in the other language? ")
         # compares answer with value
         
-        if inp == list(dictionary.values())[item_number] or "PASS" in inp:
+        if inp == list(dictionary.values())[item_number]:
             print("\x1b[6;30;42m" + "CORRECT" + "\x1b[0m")
             correct_words += 1
             dictionary.pop(key_word)
@@ -88,6 +88,12 @@ while True:
                 print(f"You knew {correct_words} correct words out of {number_of_words}! That's {result}%! ")    
                 print(f"You did not know these words\n {incorrect_words}")
                 break
+        elif  "PASS" in inp:
+            correct_words += 1
+            print(f"The correct word is: \033[1;32;40m {(list(dictionary.values())[item_number])} \x1b[0m \n")
+            dictionary.pop(key_word)
+
+            
         else:
             print(f"You are incorrect, the correct word is: \033[1;32;40m {(list(dictionary.values())[item_number])} \x1b[0m \n")
             incorrect_words.append(list(dictionary.items())[item_number])
