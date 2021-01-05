@@ -25,7 +25,7 @@ while True:
 while True:
     try:
         topic = input("Which topic would you like?\nFood & Animals(f)\nAdjectives & Verbs(v)\nClothes & Nature(n)\nPronouns and conjuctions?(c)\nPlaces, tools, accusative pronouns, house?(h)\nPeople, Family and questions(q)?\nNumbers, Food2, Money(m)\nFamily2, Prepositions2, Body, Some(s)\nShopping, Transportation(t)\nJobs, Colors, Imperative(i) \neverything(e)? ")
-        if topic[0].lower() in "fevnchqmsji":
+        if topic[0].lower() in "fvnchqmstie":
         #if topic[0].lower() == "f" or topic[0].lower() == "e" or topic[0].lower() == "v"  or topic[0].lower() == "n" or topic[0].lower() == "c" or topic[0].lower() == "h" or topic[0].lower() == "q" or topic[0].lower() == "m" or topic[0].lower() == "s" or topic[0].lower() == "j":
             break
     except:

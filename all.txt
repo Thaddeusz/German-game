@@ -498,7 +498,7 @@
 "cook":"der Koch",
 "baker":"der Bäcker",
 "profession/job":"der Beruf",
-"important to me":"ist mir wichtig",
+"important to me":"Ist mir wichtig",
 "teacher":"der Lehrer",
 "university student":"der Student",
 "professor":"der Professor",
