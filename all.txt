@@ -414,7 +414,7 @@
 "finger":"der Finger",
 "tooth":"der Zahn",
 "back":"der Rücken",
-"hearth":"das Herz",
+"heart":"das Herz",
 "shoulder":"die Schulter",
 "chest":"die Brust",
 "breast":"die Brust",

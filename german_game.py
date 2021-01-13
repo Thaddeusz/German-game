@@ -24,8 +24,8 @@ while True:
 
 while True:
     try:
-        topic = input("Which topic would you like?\nFood & Animals(f)\nAdjectives & Verbs(v)\nClothes & Nature(n)\nPronouns and conjuctions?(c)\nPlaces, tools, accusative pronouns, house?(h)\nPeople, Family and questions(q)?\nNumbers, Food2, Money(m)\nFamily2, Prepositions2, Body, Some(s)\nShopping, Transportation(t)\nJobs, Colors, Imperative(i) \neverything(e)? ")
-        if topic[0].lower() in "fvnchqmstie":
+        topic = input("Which topic would you like?\nFood & Animals(f)\nAdjectives & Verbs(v)\nClothes & Nature(n)\nPronouns and conjuctions?(c)\nPlaces, tools, accusative pronouns, house?(h)\nPeople, Family and questions(q)?\nNumbers, Food2, Money(m)\nFamily2, Prepositions2, Body, Some(s)\nShopping, Transportation(t)\nJobs, Colors, Imperative(i)\nPrepositions & Materials(p)\nComparison, House2, Dates(d) \neverything(e)? ")
+        if topic[0].lower() in "fvnchqmstiepd":
         #if topic[0].lower() == "f" or topic[0].lower() == "e" or topic[0].lower() == "v"  or topic[0].lower() == "n" or topic[0].lower() == "c" or topic[0].lower() == "h" or topic[0].lower() == "q" or topic[0].lower() == "m" or topic[0].lower() == "s" or topic[0].lower() == "j":
             break
     except:
@@ -51,6 +51,10 @@ elif topic[0].lower() == "t":
     topic_file = "store_transport.txt"
 elif topic[0].lower() == "i":
     topic_file = "jobs_colors_imperative.txt"
+elif topic[0].lower() == "p":
+    topic_file = "prep_mate.txt"
+elif topic[0].lower() == "d":
+    topic_file = "comp_house2_date.txt"
 elif topic[0].lower() == "e":
     topic_file = "all.txt"
 else:
