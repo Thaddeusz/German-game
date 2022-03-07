@@ -22,15 +22,14 @@ while True:
     except:
         pass
 
-while True:
-    try:
-        topic = input("Which topic would you like?\nFood & Animals(f)\nAdjectives & Verbs(v)\nClothes & Nature(n)\nPronouns and conjuctions?(c)\nPlaces, tools, accusative pronouns, house?(h)\nPeople, Family and questions(q)?\nNumbers, Food2, Money(m)\nFamily2, Prepositions2, Body, Some(s)\nShopping, Transportation(t)\nJobs, Colors, Imperative(i)\nPrepositions & Materials(p)\nComparison, House2, Dates(d)\nPrepositions2, Places2 and Medical(r)\nPresent2, Future1, People2, Dates2(a)\neverything(e)\nOwn words(w)?\nPrevious own dictionary?(l) ")
-        if topic[0].lower() in "fvnchqmstiepdwlra":
+#while True:
+#    try:
+topic = input("Which topic would you like?\nFood & Animals(f)\nAdjectives & Verbs(v)\nClothes & Nature(n)\nPronouns and conjuctions?(c)\nPlaces, tools, accusative pronouns, house?(h)\nPeople, Family and questions(q)?\nNumbers, Food2, Money(m)\nFamily2, Prepositions2, Body, Some(s)\nShopping, Transportation(t)\nJobs, Colors, Imperative(i)\nPrepositions & Materials(p)\nComparison, House2, Dates(d)\nPrepositions2, Places2 and Medical(r)\nPresent2, Future1, People2, Dates2(a)\nFrequvency, modal, cases(b)\neverything(e)\nOwn words(w)?\nPrevious own dictionary?(l) ")
+        #if topic[0].lower() in "fvnchqmstiepdwlrab" or topic[0] == " ":
         #if topic[0].lower() == "f" or topic[0].lower() == "e" or topic[0].lower() == "v"  or topic[0].lower() == "n" or topic[0].lower() == "c" or topic[0].lower() == "h" or topic[0].lower() == "q" or topic[0].lower() == "m" or topic[0].lower() == "s" or topic[0].lower() == "j":
-            break
-    except:
-        pass
-        
+#            break
+#    except:
+#        pass
 if topic[0].lower() == "f":
     topic_file = "food_animals.txt"
 elif topic[0].lower() == "v":
@@ -61,6 +60,8 @@ elif topic[0].lower() == "a":
     topic_file = "present2_future1_people2_dates2.txt"
 elif topic[0].lower() == "e":
     topic_file = "all.txt"
+elif topic[0].lower() == "b":
+    topic_file = "freq_modal_cases.txt"
 elif topic[0].lower() == "w": # opens a file
     own_dict = input("Add words here: ")
     with open("own_dict.txt","w") as inf:
@@ -96,8 +97,8 @@ while True:
         # compares answer with value
         
         if inp in list(dictionary.values())[item_number] and inp != "":
-            print(f"\t\t\t\t      \033[1;32;40m {(list(dictionary.values())[item_number])} \x1b[0m \n")
-            print("\x1b[6;30;42m" + "CORRECT" + "\x1b[0m")
+            print("\x1b[6;30;42m" + "CORRECT" + "\x1b[0m" + f"\t\t\t\t       {(list(dictionary.values())[item_number])}" )
+            #print("\x1b[6;30;42m" + "CORRECT" + "\x1b[0m")
 
             correct_words += 1
             dictionary.pop(key_word)
